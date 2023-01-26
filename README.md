@@ -1,3 +1,10 @@
+## Overview
+
+A customized neovim experience meant to replace the need for a modern IDE.
+
+For a full explainer and cheatsheet, see my blog post [Neovim as an IDE Replacement]()
+
+
 ## Installation
 
 Clone this repository to `~/.config/` and name the config repo `nvim`
@@ -16,4 +23,3 @@ nvim ~/.config/nvim/lua/micah/packer.lua
 :PackerSync
 ```
 
-For a full explainer and cheatsheet, see my blog post []()
