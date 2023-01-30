@@ -15,9 +15,21 @@ cd ~/.config/
 git clone https://github.com/micah-svenson/neovim-config.git nvim
 ```
 
+```
+Install Packer:
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 Open nvim and install plugin config
 ```shell
 nvim ~/.config/nvim/lua/micah/packer.lua
+
+Note you may see a bunch of errors. Its getting fixed
+
+# source the packer.lua file
+:so # short for :source %
 
 # In normal mode command prompt
 :PackerSync
