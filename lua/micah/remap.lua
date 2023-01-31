@@ -56,7 +56,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- TODO: what are these?
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+
+-- format file with black
+vim.keymap.set("n", "<leader>ff", "<cmd>!black %<CR>");
 
 -- terminal remaps
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
