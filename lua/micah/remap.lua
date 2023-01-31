@@ -9,7 +9,7 @@ vim.keymap.set("i", "kj", "<Esc>", { noremap = true })
 -- project view (aka netrw)
 --  For vert sidebar split, set to vim.cmd.Vexplore
 --  For whole window, set to vim.cmd.Ex
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Lexplore)
 
 -- "Drag" selected lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

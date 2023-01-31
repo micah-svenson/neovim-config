@@ -34,4 +34,10 @@ Note you may see a bunch of errors. Its getting fixed
 # In normal mode command prompt
 :PackerSync
 ```
-
+Install dependencies
+```
+# Ripgrep is required for project search and grep live search
+sudo apt install ripgrep
+or
+brew install ripgrep
+```

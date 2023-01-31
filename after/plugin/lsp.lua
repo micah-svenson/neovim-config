@@ -19,6 +19,16 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+lsp.configure('pyright', {
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = 'off'
+            }
+        }
+    }
+})
+
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
