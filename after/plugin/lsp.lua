@@ -30,6 +30,7 @@ lsp.configure('pyright', {
 })
 
 
+-- Autcomplete Settings
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -49,7 +50,7 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_preferences({
-    suggest_lsp_servers = false,
+    suggest_lsp_servers = true,
     sign_icons = {
         error = 'E',
         warn = 'W',
@@ -75,6 +76,8 @@ end)
 
 lsp.setup()
 
+-- diagnostic text appears to the right of the line in addition to the gutter icon
+-- This can get a bit busy sometimes. You can turn virtual_text to false and call up the diagnostic context with `<leader>vd`
 vim.diagnostic.config({
     virtual_text = true,
 })
