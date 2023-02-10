@@ -69,7 +69,8 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+  -- this functionality is overriden and used by telescope
+  -- vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
@@ -79,7 +80,7 @@ lsp.setup()
 -- diagnostic text appears to the right of the line in addition to the gutter icon
 -- This can get a bit busy sometimes. You can turn virtual_text to false and call up the diagnostic context with `<leader>vd`
 vim.diagnostic.config({
-    virtual_text = true,
+    virtual_text = false,
 })
 
 

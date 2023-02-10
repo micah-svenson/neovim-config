@@ -16,6 +16,8 @@ vim.keymap.set('n', '<leader>gb', builtin.git_branches, {}) -- git branches
 vim.keymap.set('n', '<leader>gd', builtin.lsp_definitions, {}) -- goto definition
 vim.keymap.set('n', '<leader>gi', builtin.lsp_implementations, {}) -- goto implementation
 vim.keymap.set('n', '<leader>lr', builtin.git_branches, {}) -- list references
+vim.keymap.set('n', '<leader>vrr', builtin.lsp_references, {}) -- goto implementation
+
 
 vim.keymap.set('n', '<leader>bd', function()
     builtin.diagnostics({ bufnr = 0 });

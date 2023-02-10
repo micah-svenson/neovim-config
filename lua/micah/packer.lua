@@ -28,6 +28,15 @@ return require('packer').startup(function(use)
 
     use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
 
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
