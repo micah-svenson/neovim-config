@@ -41,3 +41,18 @@ sudo apt install ripgrep
 or
 brew install ripgrep
 ```
+
+## Troubleshooting
+
+### Tree sitter Parse Error in lua config Files
+
+Problem:
+* One or more lines show `treesitter/highligher error executing lua`
+* Specifically occured in packer.lua on the packer include line
+
+Solution:
+
+* Ensure that the vim tree sitter parser is installed:
+```
+:TSInstall vim
+```
