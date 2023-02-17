@@ -5,11 +5,6 @@ vim.keymap.set({"i", "v", "n"}, "<C-l>", ":nohl<CR><C-l>", { desc = "Clear highl
 
 vim.keymap.set("i", "kj", "<Esc>", { noremap = true, desc = "Ahh, much better way to escape insert mode"})
 
--- project view (aka netrw)
---  For vert sidebar split, set to vim.cmd.Vexplore
---  For whole window, set to vim.cmd.Ex
-vim.keymap.set("n", "<leader>pv", vim.cmd.Lexplore, { desc = "[P]roject [V]iew opens netrw" })
-
 -- "Drag" selected lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Drag selection down one line" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Drag selection up one line" })

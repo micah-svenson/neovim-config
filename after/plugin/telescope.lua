@@ -22,3 +22,5 @@ vim.keymap.set('n', '<leader>vrr', builtin.lsp_references, {}) -- goto implement
 vim.keymap.set('n', '<leader>bd', function()
     builtin.diagnostics({ bufnr = 0 });
 end)
+
+-- I want to implement a combination file picker and live grep to easily search through notes in specific folders within my notes project. Here is a note on suggested implementation: https://www.reddit.com/r/neovim/comments/r74647/comment/hmx0w58/

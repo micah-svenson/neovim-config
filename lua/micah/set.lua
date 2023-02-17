@@ -36,3 +36,7 @@ vim.opt.updatetime = 50
 
 -- vim.opt.colorcolumn = "80"
 
+
+-- Unless you are still migrating, remove the deprecated commands from v1.x
+--vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+vim.g.neo_tree_remove_legacy_commands = 1
