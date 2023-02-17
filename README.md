@@ -56,3 +56,13 @@ Solution:
 ```
 :TSInstall vim
 ```
+
+## Fonts and Icons
+
+If you are seeing little boxes where icons should be, you probably aren't using the right font in your terminal or you don't have a nerdfont patched font installed.
+
+If you dont have a font:
+
+* go to nerdfonts.com, download a font you like, install the font according to the os you are on.
+* set the font of the terminal you use neovim in to use the patched font.
+* voila
