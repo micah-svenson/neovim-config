@@ -26,7 +26,12 @@ return require('packer').startup(function(use)
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 
-    use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
+    -- jupyter plugins
+    use {'GCBallesteros/jupytext.vim'}
+    use {'hkupty/iron.nvim'}
+    use {'kana/vim-textobj-user'}
+    use {'GCBallesteros/vim-textobj-hydrogen'}
+
 
     use {
         'numToStr/Comment.nvim',
