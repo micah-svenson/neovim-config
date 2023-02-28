@@ -32,7 +32,6 @@ return require('packer').startup(function(use)
     use {'kana/vim-textobj-user'}
     use {'GCBallesteros/vim-textobj-hydrogen'}
 
-
     use {
         'numToStr/Comment.nvim',
         config = function()

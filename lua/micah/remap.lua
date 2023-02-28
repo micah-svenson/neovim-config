@@ -1,9 +1,13 @@
 vim.g.mapleader = " "
 
--- clear highlighted search with ctrl+l
+-- clear highlighted search with ctrl+l. Inspired by terminal clear mapping
 vim.keymap.set({"i", "v", "n"}, "<C-l>", ":nohl<CR><C-l>", { desc = "Clear highlights" })
 
 vim.keymap.set("i", "kj", "<Esc>", { noremap = true, desc = "Ahh, much better way to escape insert mode"})
+
+-- Helix inspired remaps because I never liked ^ and $
+vim.keymap.set("n", "gh", "^", { desc = "[G]oto first char in line (h is chosen because its also a left movement" })
+vim.keymap.set("n", "gl", "$", { desc = "[G]oto last char in line (l is chosen because its also a right movement" })
 
 -- "Drag" selected lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Drag selection down one line" })
@@ -33,10 +37,13 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
--- format your code using the current lsp
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- Look this up laterhttps://crates.io/crates/tmux-sessionizer
+--vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "[F]ormat file using LSP" })
+
+vim.keymap.set("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file" });
 
 -- TODO: learn how to use marks/tags?
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -44,12 +51,8 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
--- TODO: what are these?
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
--- format file with black
-vim.keymap.set("n", "<leader>ff", "<cmd>!black %<CR>");
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, { desc = "Add executable permissions to the current buffer" })
 
 -- terminal remaps
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true }, { desc = "Escape insert mode in a terminal" })
 

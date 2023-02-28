@@ -1,3 +1,8 @@
+-- :help lua-vim-variables
+-- :help set-option
+-- :help vim.opt
+
+
 -- show line numbers and make them relative
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -37,9 +42,16 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 
 
--- Unless you are still migrating, remove the deprecated commands from v1.x
---vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-vim.g.neo_tree_remove_legacy_commands = 1
-
+-- Unless you are still migrating, remove
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.g.neo_tree_remove_legacy_commands = 1
+
+-- spell check and spell suggestion settings
+vim.g.spell = 1
+
+-- Make w, b, e, and ge jump to individual words in an underscore name such as my_underscored_name
+-- W, B, E, and gE can be used to jump the full underscore name
+vim.opt.iskeyword:remove { "_" }
+

@@ -31,14 +31,18 @@ autocmd({"BufWritePre"}, {
 	command = [[%s/\s\+$//e]],
 })
 
--- remove netrw banner
-vim.g.netrw_banner = 0
--- 3 is the tree view
-vim.g.netrw_liststyle = 3
--- opens new file in previous window
-vim.g.netrw_browse_split = 0
--- TODO: idk
-vim.g.netrw_altv = 1
--- assuming vertical split, make it nice and small
-vim.g.netrw_winsize = 25
 
+-- NETRW CONFIG (Currently Unused)
+-- -- remove netrw banner
+-- vim.g.netrw_banner = 0
+-- -- 3 is the tree view
+-- vim.g.netrw_liststyle = 3
+-- -- opens new file in previous window
+-- vim.g.netrw_browse_split = 0
+-- -- TODO: idk
+-- vim.g.netrw_altv = 1
+-- -- assuming vertical split, make it nice and small
+-- vim.g.netrw_winsize = 25
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
