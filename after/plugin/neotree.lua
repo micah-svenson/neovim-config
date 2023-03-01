@@ -4,9 +4,16 @@
 -- vim.cmd.Git({'pull',  '--rebase'})
 --vim.keymap.set("n", "<leader>pv", ":Neotree toggle reveal<cr>", { desc = "[P]roject [V]iew opens netrw" })
 --vim.keymap.set("n", "<leader>pv", vim.cmd.Neotree({"toggle", "reveal"}), { desc = "[P]roject [V]iew opens netrw" })
-vim.keymap.set('n', '<leader>pv', function()
+--
+
+--
+vim.keymap.set('n', '<leader>eo', function()
     vim.cmd.Neotree({ "toggle", "reveal" });
-end)
+end, {desc = "[E]xplorer [O]pen"})
+
+vim.keymap.set('n', '<leader>ee', function()
+    vim.cmd.Neotree({ "<cr>" });
+end, {desc = "[E]xplorer focus (or open)"})
 
 -- If you want icons for diagnostic errors, you'll need to define them somewhere:
 vim.fn.sign_define("DiagnosticSignError",

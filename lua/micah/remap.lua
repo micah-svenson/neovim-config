@@ -45,6 +45,8 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "[F]ormat file usi
 
 vim.keymap.set("n", "<leader>fp", "<cmd>!black %<CR>", { desc = "[F]ormat [P]ython file" });
 
+vim.keymap.set("n", "<leader>fj", "<cmd>%!jq '.'<CR>", { desc = "[F]ormat [J]son file" });
+
 -- TODO: learn how to use marks/tags?
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -55,4 +57,10 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }, { de
 
 -- terminal remaps
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true }, { desc = "Escape insert mode in a terminal" })
+
+--tabpage rempas
+vim.keymap.set("n", "<leader>ta", "<cmd>tabnew<CR>", { desc = "[T]abpage [A]dd new tab" })
+vim.keymap.set("n", "<leader>tr", "<cmd>tabclose<CR>", { desc = "[T]abpage [R]emove current tab" })
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "[T]abpage [N]ext tab" })
+vim.keymap.set("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "[T]abpage [P]revious tab" })
 

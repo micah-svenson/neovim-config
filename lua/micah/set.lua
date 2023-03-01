@@ -55,3 +55,12 @@ vim.g.spell = 1
 -- W, B, E, and gE can be used to jump the full underscore name
 vim.opt.iskeyword:remove { "_" }
 
+-- Code folding, enabled by tree sitter
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- TODO: nofoldenable is not a config option, even though treesitter docs use it. look it up later
+-- vim.opt.nofoldenable = 1
+
+-- foldcolumn needs to be a string for whatever reason
+vim.opt.foldcolumn = "4"
+
