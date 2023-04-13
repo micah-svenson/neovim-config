@@ -51,9 +51,10 @@ vim.g.neo_tree_remove_legacy_commands = 1
 -- spell check and spell suggestion settings
 vim.g.spell = 1
 
+-- NOTE: in its current configuration, this ends up being super annoying. I like the idea though
 -- Make w, b, e, and ge jump to individual words in an underscore name such as my_underscored_name
 -- W, B, E, and gE can be used to jump the full underscore name
-vim.opt.iskeyword:remove { "_" }
+-- vim.opt.iskeyword:remove { "_" }
 
 -- Code folding, enabled by tree sitter
 -- vim.opt.foldmethod = "expr"
