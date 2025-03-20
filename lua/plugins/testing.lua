@@ -1,4 +1,5 @@
 -- from https://github.com/rcasia/neotest-java
+-- This config didn't work and kept crashing nvim.
 if true then
   return {}
 end
