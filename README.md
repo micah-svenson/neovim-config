@@ -1,11 +1,10 @@
 # Overview
+
 <!--toc:start-->
 - [Overview](#overview)
-- [MacOS Setup](#macos-setup)
-- [Linux (Ubuntu) Setup](#linux-ubuntu-setup)
+  - [MacOS Setup](#macos-setup)
+  - [Linux (Ubuntu) Setup](#linux-ubuntu-setup)
 <!--toc:end-->
-
-## Overview
 
 This config is base on 💤 LazyVim
 
@@ -15,31 +14,31 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 1. Clone Config
 
-```
+```shell
 git clone https://github.com/micah-svenson/neovim-config.git ~/.config/nvim
 ```
 
-2. Install Neovim
+1. Install Neovim
 
-```
+```shell
 brew install neovim
 ```
 
-3. Install Ripgrep
+1. Install Ripgrep
 
-```
+```shell
 brew install ripgrep
 ```
 
-4. Install delta (pretty git diffs)
+1. Install delta (pretty git diffs)
 
-```
+```shell
 brew install git-delta
 ```
 
-5. Install newest version of git
+1. Install newest version of git
 
-```
+```shell
 brew install git
 
 ```
@@ -107,11 +106,11 @@ git clone https://github.com/micah-svenson/neovim-config.git ~/.config/nvim
 
  Add git config file according to: <https://dandavison.github.io/delta/configuration.html>
 
-    ```shell
-    curl -LO https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb
-    dpkg -i git-delta_0.18.2_amd64.deb
-    - fd-find: sudo apt install fd-find
-    ```
+```shell
+curl -LO https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb
+dpkg -i git-delta_0.18.2_amd64.deb
+- fd-find: sudo apt install fd-find
+  ```
 
 1. Install newest version of git
 
