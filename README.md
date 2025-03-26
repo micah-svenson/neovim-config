@@ -1,14 +1,8 @@
+# Overview
 <!--toc:start-->
 - [Overview](#overview)
 - [MacOS Setup](#macos-setup)
-  - [Clone Config](#clone-config)
-  - [Neovim](#neovim)
-    - [Mac OS](#mac-os)
-    - [Linux (Ubuntu)](#linux-ubuntu)
-  - [Install Other dependencies](#install-other-dependencies)
-  - [Install newest version of git](#install-newest-version-of-git)
 - [Linux (Ubuntu) Setup](#linux-ubuntu-setup)
-  - [Install newest version of git](#install-newest-version-of-git)
 <!--toc:end-->
 
 ## Overview
@@ -50,51 +44,79 @@ brew install git
 
 ```
 
-6. Install lazygit
+1. Install lazygit
 
-```
+```shell
 brew install lazygit
+```
+
+Add the following to the lazygit config (access in the app with 1[status] then e)
+
+```yaml
+# Keybindings
+keybinding:
+  universal:
+    confirmInEditor: <c-k>
+# Config relating to git
+git:
+  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
+  paging:
+    # Value of the --color arg in the git diff command. 
+    # Some pagers want this to be set to 'always' and some want it set to 'never'
+    colorArg: always
+    pager: delta --dark --paging=never
+```
+
+1. Install fzf
+
+```shell
+brew install fzf
+```
+
+1. Install fd-find
+
+```shell
+brew install fd
 ```
 
 ## Linux (Ubuntu) Setup
 
 1. Clone Config
 
-```
+```shell
 git clone https://github.com/micah-svenson/neovim-config.git ~/.config/nvim
 ```
 
-2. Install Neovim
+1. Install Neovim
 
-- Install the latest stable release from their github repo. Package managers usually have much older versions, which is not recommended.
+- Install the latest stable release from their github repo.
+  - Package managers usually have much older versions, which is not recommended.
 
-    ```
+    ```shell
     curl --output-dir ~/downloads/nvim --create-dirs -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
     sudo rm -rf /opt/nvim
     sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
     rm -rf ~/downloads/nvim
     ```
 
-3. Install Ripgrep
+1. Install Ripgrep
 
 - ```sudo apt install ripgrep```
 
-4. Install delta (pretty git diffs)
+1. Install delta (pretty git diffs)
 
-- Add git config file according to: <https://dandavison.github.io/delta/configuration.html>
+ Add git config file according to: <https://dandavison.github.io/delta/configuration.html>
 
-    ```
+    ```shell
     curl -LO https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb
     dpkg -i git-delta_0.18.2_amd64.deb
     - fd-find: sudo apt install fd-find
     ```
 
-5. Install newest version of git
+1. Install newest version of git
 
-  ```
+  ```shell
   sudo add-apt-repository ppa:git-core/ppa
   sudo apt update && sudo apt upgrade
   sudo apt install git
   ```
-
-6.
