@@ -1,7 +1,7 @@
 local path = require("plenary.path")
 
 -- Add goals to execute here
-local mvn_goals = { "test", "verify", "compile", "package", "quarkus:dev" }
+local mvn_goals = { "install", "test", "verify", "compile", "package", "quarkus:dev" }
 
 local function is_pom_xml_in_cwd()
   return path:new(vim.fn.getcwd() .. "/pom.xml"):exists()
