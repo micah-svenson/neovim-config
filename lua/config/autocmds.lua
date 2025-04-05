@@ -6,3 +6,14 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- NOTE: This crashed out pretty bad when spotless wasn't there. might want to try and find something more elegant.
+-- Use built-in spotless formatter for java files
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+--   pattern = "*.java",
+--   callback = function()
+--     local filepath = vim.api.nvim_get_current_buf()
+--     os.execute("mvn spotless:apply -DspotlessFiles=" .. filepath)
+--     vim.cmd.edit()
+--   end,
+-- })
