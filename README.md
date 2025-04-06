@@ -1,10 +1,11 @@
 # Overview
 
 <!--toc:start-->
+
 - [Overview](#overview)
   - [MacOS Setup](#macos-setup)
   - [Linux (Ubuntu) Setup](#linux-ubuntu-setup)
-<!--toc:end-->
+  <!--toc:end-->
 
 This config is base on 💤 LazyVim
 
@@ -60,7 +61,7 @@ keybinding:
 git:
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
   paging:
-    # Value of the --color arg in the git diff command. 
+    # Value of the --color arg in the git diff command.
     # Some pagers want this to be set to 'always' and some want it set to 'never'
     colorArg: always
     pager: delta --dark --paging=never
@@ -89,6 +90,7 @@ git clone https://github.com/micah-svenson/neovim-config.git ~/.config/nvim
 1. Install Neovim
 
 - Install the latest stable release from their github repo.
+
   - Package managers usually have much older versions, which is not recommended.
 
     ```shell
@@ -100,22 +102,22 @@ git clone https://github.com/micah-svenson/neovim-config.git ~/.config/nvim
 
 1. Install Ripgrep
 
-- ```sudo apt install ripgrep```
+- `sudo apt install ripgrep`
 
 1. Install delta (pretty git diffs)
 
- Add git config file according to: <https://dandavison.github.io/delta/configuration.html>
+Add git config file according to: <https://dandavison.github.io/delta/configuration.html>
 
 ```shell
 curl -LO https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_amd64.deb
 dpkg -i git-delta_0.18.2_amd64.deb
 - fd-find: sudo apt install fd-find
-  ```
+```
 
 1. Install newest version of git
 
-  ```shell
-  sudo add-apt-repository ppa:git-core/ppa
-  sudo apt update && sudo apt upgrade
-  sudo apt install git
-  ```
+```shell
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update && sudo apt upgrade
+sudo apt install git
+```
