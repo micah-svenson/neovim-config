@@ -9,11 +9,19 @@
 
 -- NOTE: This crashed out pretty bad when spotless wasn't there. might want to try and find something more elegant.
 -- Use built-in spotless formatter for java files
+--
+-- Format java files with mvn spotless. jdtls config has formatting turned off. See plugins/java.lua.
 -- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 --   pattern = "*.java",
 --   callback = function()
 --     local filepath = vim.api.nvim_get_current_buf()
---     os.execute("mvn spotless:apply -DspotlessFiles=" .. filepath)
---     vim.cmd.edit()
+--     local project_pom = "-f " .. vim.fn.getcwd() .. "pom.xml"
+--     local status, err =
+--       pcall(os.execute, "mvn spotless:apply " .. project_pom .. " -DspotlessFiles=" .. filepath .. " > /dev/null 2>&1")
+--     if status then
+--       vim.cmd.edit()
+--     else
+--       print("Failed to run spotless: " .. err)
+--     end
 --   end,
 -- })
