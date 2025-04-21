@@ -1,6 +1,6 @@
 {
   "LazyVim": { "branch": "main", "commit": "3f034d0a7f58031123300309f2efd3bb0356ee21" },
-  "SchemaStore.nvim": { "branch": "main", "commit": "9961c820c0fb66288056093e8fb8056570a1eb9a" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "992285058ce208825eb1b9ac82fa6be7d76ffcc1" },
   "aerial.nvim": { "branch": "master", "commit": "44684bf429dc40e97a6d00ffa09043ac3f692186" },
   "blink.cmp": { "branch": "main", "commit": "cb5e346d9e0efa7a3eee7fd4da0b690c48d2a98e" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
@@ -23,6 +23,7 @@
   "mini.files": { "branch": "main", "commit": "432142ada983ec5863ba480f0e4891b7d64ce3f6" },
   "mini.icons": { "branch": "main", "commit": "397ed3807e96b59709ef3292f0a3e253d5c1dc0a" },
   "mini.pairs": { "branch": "main", "commit": "69864a2efb36c030877421634487fd90db1e4298" },
+  "mini.snippets": { "branch": "main", "commit": "e05106957fc178285dbc510ff833985da59d3e5a" },
   "molten-nvim": { "branch": "main", "commit": "e6847d01b5540750f39543d30262da5454d373d1" },
   "neotest": { "branch": "master", "commit": "dddbe8fe358b05b2b7e54fe4faab50563171a76d" },
   "neotest-golang": { "branch": "main", "commit": "3b9685715b9b7219de4cd4c6adde05c28e617775" },

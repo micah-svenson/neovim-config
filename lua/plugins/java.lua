@@ -25,6 +25,35 @@ return {
       }
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      servers = {
+        lemminx = {
+          init_options = {
+            settings = {
+              xml = {
+                format = {
+                  enabled = true,
+                  splitAttributes = "preserve",
+                  maxLineWidth = 280,
+                },
+              },
+              xslt = {
+                format = {
+                  enabled = true,
+                  splitAttributes = "preserve",
+                  maxLineWidth = 280,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
   -- NOTE: Commented out code below is a failed attempt to get debuggable tests working through neotest.
   -- In the future mabye look into https://github.com/nvim-java/nvim-java instead
   -- Or this https://github.com/bcampolo/nvim-starter-kit/blob/java/.config/nvim/ftplugin/java.lua
