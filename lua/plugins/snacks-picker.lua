@@ -7,6 +7,12 @@ return {
       },
     },
     picker = {
+      formatters = {
+        file = {
+          -- number of results to return
+          truncate = 300,
+        },
+      },
       win = {
         preview = {
           wo = {
