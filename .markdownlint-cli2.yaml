@@ -24,3 +24,10 @@ config:
 
   # MD040 - Allow code blocks without language (useful for custom fences)
   MD040: false
+
+  # Spaces after list markers
+  MD030:
+    ul_single: 1
+    ol_single: 1
+    ul_multi: 1
+    ol_multi: 1
