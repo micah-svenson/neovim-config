@@ -1,2 +1,26 @@
 config:
+  # Disable line length rule (as you already had)
   MD013: false
+
+  # Configure unordered list indentation to use 4 spaces
+  MD007:
+    indent: 4
+
+  # PyMdown Extensions compatibility rules
+  # Disable these rules that conflict with PyMdown syntax:
+
+  # MD046 - Code block style conflicts with superfences in lists
+  MD046: false
+
+  # MD053 - Link reference definitions not detected in admonitions
+  MD053: false
+
+  # MD033 - Allow inline HTML (required for PyMdown extensions)
+  MD033: false
+
+  # MD024 - Allow duplicate headings (useful for tabbed content)
+  MD024:
+    siblings_only: true
+
+  # MD040 - Allow code blocks without language (useful for custom fences)
+  MD040: false
