@@ -7,6 +7,22 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+-- Chezmoi template filetype detection
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.*.tmpl",
+  callback = function()
+    local filename = vim.fn.expand("%:t")
+    -- Extract the base filetype from the filename (e.g., "sh" from "script.sh.tmpl")
+    local base_ft = filename:match("%.([^%.]+)%.tmpl$")
+    if base_ft then
+      -- Set the filetype to the base type with .tmpl suffix for potential ftplugin files
+      vim.bo.filetype = base_ft .. ".tmpl"
+      -- Also set syntax to the base filetype for basic syntax highlighting
+      vim.bo.syntax = base_ft
+    end
+  end,
+})
+
 -- NOTE: This crashed out pretty bad when spotless wasn't there. might want to try and find something more elegant.
 -- Use built-in spotless formatter for java files
 --
